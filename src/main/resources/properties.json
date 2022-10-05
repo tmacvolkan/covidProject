@@ -1,0 +1,6 @@
+
+{
+  "caseUrl": "https://covid-api.mmediagroup.fr/v1/cases?country={country}",
+  "historyUrl": "https://covid-api.mmediagroup.fr/v1/history?country={country}&status=confirmed",
+  "vaccinesUrl": "https://covid-api.mmediagroup.fr/v1/vaccines?country={country}"
+}

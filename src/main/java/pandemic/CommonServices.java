@@ -7,11 +7,11 @@ import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
 import java.time.Duration;
 
-public class Commons {
+public class CommonServices {
 
 	Util util = new Util();
 	 
-	public Commons() throws Exception {
+	public CommonServices() throws Exception {
 		// loading properties from file
 		util.readProperties();
 	}

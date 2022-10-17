@@ -10,7 +10,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import pandemic.model.HistoryModel;
 
-public class HistoryService extends Commons implements HttpCaller{
+public class HistoryService extends CommonServices implements HttpCaller{
 	
 	public HistoryService() throws Exception {
 		super();

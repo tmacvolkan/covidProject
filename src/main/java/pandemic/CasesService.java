@@ -8,7 +8,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import pandemic.model.CasesModel;
 
-public class CasesService extends Commons implements HttpCaller{
+public class CasesService extends CommonServices implements HttpCaller{
 	
 	public CasesService() throws Exception {
 		super();

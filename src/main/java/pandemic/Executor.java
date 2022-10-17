@@ -13,14 +13,23 @@ public class Executor {
         
         //getting country from user
         String country = scanner.nextLine();
+                
+        //find datas
+        CasesService cases = new CasesService();
         
-        HttpCaller caller = new HttpCaller();
+        VaccinesService vaccines = new VaccinesService();
+        
+        HistoryService history = new HistoryService();
         
         // execute program
-        String result = caller.call(country);
+        String casesData = cases.getData(country).toString();
+        
+        String vaccinesData = vaccines.getData(country).toString();
+        
+        String historyData = history.getData(country).toString();
         
         //print result
-        System.out.println(result);
+        System.out.println(casesData + vaccinesData + historyData);
 
 	}
 

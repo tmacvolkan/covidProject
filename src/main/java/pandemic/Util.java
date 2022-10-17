@@ -8,7 +8,7 @@ import java.nio.charset.StandardCharsets;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class Util {
+public final class Util {
 
 	private static final String propertyFile = "properties.json";
 	public String caseUrl;
@@ -24,6 +24,14 @@ public class Util {
     	e.printStackTrace();
     	throw new Exception(e.getMessage());
     	
+	}
+	
+	public String capitalize(String str) {
+	    if(str == null || str.isEmpty()) {
+	        return str;
+	    }
+
+	    return str.substring(0, 1).toUpperCase() + str.toLowerCase().substring(1);
 	}
 
 	// read urls from property

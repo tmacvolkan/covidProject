@@ -2,6 +2,7 @@ package pandemic;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -27,7 +28,7 @@ public class UtilTest {
 		assertNotNull(util.caseUrl);
 		assertNotNull(util.vaccinesUrl);
 		assertNotNull(util.historyUrl);
-		assertNotNull(util.percentage);
+		assertNotNull(Util.percentage);
 	}
     
 	@Test 
@@ -35,6 +36,21 @@ public class UtilTest {
 		assertEquals(util.caseUrl, "https://covid-api.mmediagroup.fr/v1/cases?country={country}");
 		assertEquals(util.historyUrl, "https://covid-api.mmediagroup.fr/v1/history?country={country}&status=confirmed");
 		assertEquals(util.vaccinesUrl, "https://covid-api.mmediagroup.fr/v1/vaccines?country={country}");
+	}
+	
+	@Test
+	public void capitalizeNotNull() {
+		assertNotNull(util.capitalize("france"));
+	}
+	
+	@Test
+	public void capitalizeNull() {
+		assertNull(util.capitalize(null));
+	}
+	
+	@Test
+	public void capitalizeEqual() {
+		assertEquals(util.capitalize("fRanCE"),"France");
 	}
 	
 	
